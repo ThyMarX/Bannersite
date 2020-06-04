@@ -1,0 +1,348 @@
+/* CSS for sending the Bannerform */
+/* Made by: Thomas Dyrholm Siemsen */
+
+
+/* Classes that are reused for multiple elements */
+.flex{display: flex; flex-wrap: wrap; width: 100%;}
+.flexNW{display: flex; flex-wrap: nowrap; width: 100%;}
+.spaceBetween{justify-content: space-between;}
+.selfEnd{align-self: flex-end;}
+.alignCenter{align-items: center;}
+.airTop1{margin-top: 25px;}
+.airTop2{margin-top: 35px;}
+.airTop3{margin-top: 15px;}
+.airTop4{margin-top: 5px;}
+.fw{width: 100%;}
+
+#bannerForm{
+    width: 80%;
+    margin: 40px 10%;
+    box-shadow: 0 0 100px rgba(0,0,0,.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+}
+p{
+    padding-bottom: 0px;
+    font-weight: 600;
+}
+
+.bannerDetails{
+    background-color: rgb(245, 245, 245);
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%;
+}
+.sizeBoxTextInput{background-color: rgb(255, 255, 255) !important;}
+#bannerForm select, .bannerDetails input, .platformBox>div>input{
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: none;
+}
+.bannerDetails button{
+    background-color: white;
+    border-color: white;
+}
+
+.platformBoxTop{
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 15px dotted white;
+}
+button{border-color:rgb(239,239,239);}
+.smBtn{
+    min-width: max-content;
+    font: inherit;
+    font-size: smaller;
+    font-weight: 100;
+    padding: 0 5px;
+}
+.mdBtn{
+    min-width: max-content;
+    font: inherit;
+    font-weight: 500;
+    padding: 7px;
+}
+.dltBannerBtn{float: right;}
+
+.fwMdBtn{margin-right: 20px;}
+
+.formNote{
+    font-size: 12px;
+    font-weight: 100 !important;
+}
+
+.half{width: 49% !important;}
+
+.spotInbetween{
+    margin-top: 10px;
+    padding-bottom: 0px !important;
+}
+
+.sizeBoxChild1{/*width: 20%;*/ margin-right: 60px;}
+.sizeBoxChild2{width: 60%;}
+.sizeBoxChild>label {display: flex;}
+.sizeBoxChild>label>input {margin-top: 7px;}
+.sizeBoxChild>label>p {
+    padding: 0 0 0 5px;
+}
+.sizeBoxChild{
+    display: flex;
+    flex-direction: column;
+}
+.sizeBoxChild p{
+    font-weight: 400;
+}
+
+.sizeBoxTextInput{height: 29px; margin-right: 5px;}
+.sizeBoxTextInput1{width: 71% !important;}
+.sizeBoxTextInput2{width: 88.5% !important;}
+.sizeExtraChild{
+    width: 47%;
+    margin: 5px 10px 0 0;
+    padding: 5px;
+    /*border: solid 1px rgb(200, 200, 200);*/
+    background-color: rgba(210, 210, 210);
+    border-radius: 5px;
+    flex-wrap: nowrap;
+}
+.sizeExtraChild p{
+    margin-right: 6px;
+    font-weight: 400;
+}
+
+.basicPackage{
+    width:fit-content;
+    background-color: rgba(230, 230, 230);
+    color: rgb(103, 103, 103) !important;
+}
+.bpLabel{
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px 0 5px;
+}
+.bpInput{margin: 7px 7px 0 4px;}
+.bpOptions{
+    border-radius: 0 5px 5px 5px;
+    padding: 5px 10px 5px 5px;
+    margin-right:60px;
+}
+
+.bannerFormButton{
+    height: 21px; 
+    width: 24px;
+    text-align: center;
+}
+
+.buttonBox{
+    width: 24px;
+    height: 47px;
+    float: right;
+}
+
+.bannerFormTextArea{
+    height: 96px;
+    max-height: 300px;
+    min-height: 48px;
+    max-width: 100%;
+    min-width: 100%;
+} 
+
+.sizes{
+    display: none;
+    margin-bottom: 20px;
+    flex-wrap:nowrap;
+}
+
+.sizeText{
+    font-weight:600; 
+    font-size: 16px;
+}
+
+.specificSizeCheck{
+    margin-right:20px; 
+    display:flex; 
+    flex-wrap:nowrap; 
+    padding-top:1px;
+}
+
+@keyframes sizesIn {
+    0%   {transform: translate(0px, -30px); opacity: 0;}
+    100% {transform: translate(0px, 0px);   opacity: 1;}
+}
+@keyframes sizesOut {
+    0%   {transform: translate(0px, 0px); opacity: 1;}
+    100% {transform: translate(0px, -30px);   opacity: 0; height: 0; margin: 0}
+}
+.sizeContainer{
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.errorMsg{color: rgb(255, 55, 55);}
+output.errorMsg{font-weight: 600;}
+.errorField::placeholder{color: white;}
+.errorField{
+    background-color: rgb(255, 55, 55) !important;
+    color: white !important;
+}
+#errMsgOutput{
+    padding: 11px;
+    color: rgb(255, 55, 55);
+    margin-left: 30%;
+}
+
+button, label, input[type=file], input[type=checkbox]{
+    cursor: pointer;
+}
+
+/* Pop-up window for confirmation message */
+.visible{
+    display: block !important;
+}
+
+.popUp{
+    display: none; /* er normalt skjult */
+    position: fixed; /* Ændre ikke position */
+    z-index: 2; /* Dens position er over alt andet html */
+    left: 0;
+    top: 0%;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Gør at man kan scrolle, hvis modalet er for stort til skærmen */
+    background-color: rgba(0,0,0,0.05); /* Gør bacgrunden mørk men gennemsigtig  */
+}
+
+.popUpContent {
+    background-color: #fefefe;
+    border-radius: 10px;
+    border: 1px solid rgb(226, 226, 226);
+    width: 600px;
+}
+
+.closePopUp, .closeDltOrd {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.closePopUp:hover, .closePopUp:focus, .closeDltOrd:hover, .closeDltOrd:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.confirmationStyle > div{
+    padding: 20px;
+}
+
+#confirmationContent{
+    overflow-y: auto;
+    border-top: 1px solid rgb(226, 226, 226);
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+/* To make sure the scrollbar is always visible */
+#confirmationContent::-webkit-scrollbar {-webkit-appearance: none;}
+#confirmationContent::-webkit-scrollbar:vertical {width: 11px;}
+#confirmationContent::-webkit-scrollbar:horizontal {height: 11px;}
+#confirmationContent::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* This is so the popUp window is above the footer */
+#footer-outer, #nectar_fullscreen_rows>#footer-outer.wpb_row .full-page-inner-wrap {
+    z-index: 1 !important;
+}
+
+/* The screen widths are ajusted to the theme */
+/* 1000px wide screens and above          || xl- Pc screens*/
+.fieldWB{width: 95% !important;}
+.md-display{display: none;}
+.sm-display{display: none;}
+
+/* 691 to 999px wide screens and below    || lg- Tablets laying down */
+@media screen and (max-width: 999px){
+    .fieldWB{width: 94% !important;}
+    #bannerForm{
+        width: 100%;
+        margin: 0%;
+    }
+
+    .popUpContent{width: 490px;}
+}
+
+/* 480 to 690px wide screens and below    || md- Phones laying down and tablets standing */
+@media screen and (max-width: 690px){
+    .fieldWB{width: 92% !important;}
+    .sizeBoxChild{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /* .sizeBoxChild1>label {width: 90px;} */
+    .sizeBoxChild1{width: 100%;}
+    .sizeBoxChild2{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .sizeBoxChild2>div {width: 100%;}
+    .sizeExtraChild{width: 49%;}
+    .sizeBoxTextInput2 {width: 100% !important;}
+
+    #errMsgOutput{margin-left: 10%;}
+
+    .md-hide{display: none;}
+    .md-display{display: block;}
+    .md-spaceBetween{justify-content: space-between;}
+
+    .popUpContent{width: 400px;}
+}
+
+/* 479px wide screens and below (min 320)  || sm- Phones standing up */
+@media screen and (max-width: 479px){
+    .fieldWB{width: 89% !important;}
+    #bannerForm{
+        padding: 2%;
+        box-shadow: none;
+    }
+    
+    .sizeBoxChild{flex-direction: column;}
+    .sizeExtraChild{width: 100%;}
+    .sizeBoxTextInput1{width: 63% !important;}
+
+    .sm-hide{display: none;}
+    .sm-display{display: block;}
+    .sm-files{width: 226px;}
+
+    .popUpContent{width: 300px;}
+}
+
+/* Max heights of the screen to style the confirmationContent max height */
+.confirmationStyle{margin: 20vh auto 2vh auto;}
+.mailResultStyle{
+    margin: 40vh auto 2vh auto;
+    padding: 20px;
+}
+#confirmationContent{max-height: 45vh;}
+
+@media screen and (max-height: 1499px){
+    .confirmationStyle{margin-top: 19vh;}
+    .mailResultStyle{margin-top: 40vh;}
+    #confirmationContent{max-height: 40vh;} /* 45 because it looks better */
+}
+@media screen and (max-height: 999px){
+    .confirmationStyle{margin-top: 17vh;}
+    .mailResultStyle{margin-top: 35vh;}
+    #confirmationContent{max-height: 50vh;} /* 60 because it's more practical */
+}
+@media screen and (max-height: 690px){
+    .confirmationStyle{margin-top: 15vh;}
+    .mailResultStyle{margin-top: 30vh;}
+    #confirmationContent{max-height: 40vh;}
+}
+@media screen and (max-height: 479px){
+    .confirmationStyle{margin-top: 15vh;}
+    .mailResultStyle{margin-top: 35vh;}
+    #confirmationContent{max-height: 40vh;}
+}

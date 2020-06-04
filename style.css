@@ -1,0 +1,110 @@
+/*
+Theme Name: Salient Child Theme
+Description: This is a custom child theme for Salient
+Theme URI:   https://themeforest.net/item/salient-responsive-multipurpose-theme/4363266
+Author: ThemeNectar
+Author URI:  https://themeforest.net/user/themenectar
+Template: salient
+Version: 1.0
+*/
+
+/* ----Style i had in WP Customise window---- */
+comments, .mobile-search, .buttons.sf-menu, .meta-category, #author-bio, #single-below-header, .heading-title,
+.blog_next_prev_buttons.wpb_row.vc_row-fluid.full-width-content.standard_section,
+.comment-form-cookies-consent{
+	display: none !important;
+}
+
+#images-container > div > div > div > .wpb_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.images-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.comment-wrap{
+    padding-top: 0 !important;
+}
+
+.col.span_12.section-title.text-align-center.extra-padding > h1 {
+    max-width: none;
+}
+
+.image-div{
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-top: 40px;
+}
+
+.image-nr{
+	position: absolute;
+	background-color: #3452ff;
+	height: 45px;
+	border-radius: 5px 0 0 5px; 
+	width: 17px;
+	left: -17px;
+}
+
+.image-nr h5 {
+	color: white;
+	text-align: center;
+	width: 17px;
+}
+
+.refresh-icon {
+	padding-left: 4px;
+	transition: .8s;
+}
+.refresh-icon:hover {
+	cursor: pointer;
+	transform: rotate(-360deg);
+}
+
+.image-details{
+	position: absolute;
+	top: -9px;
+}
+
+.image-details > div {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	height: 0;
+}
+
+.image-details > div > p {
+	padding-bottom: 0;
+	padding-right: 9px;
+	height: 15px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.bigBtn{
+	padding: 23px 50px;
+	background-color: #3452ff!important;
+    color: #fff;
+	font-size: 18px;
+    font-weight: 600;
+	border-radius: 4px!important;
+    -webkit-border-radius: 4px!important;
+	width: 290px;
+}
+
+.btn:hover{
+  -webkit-transition: opacity .45s cubic-bezier(0.25, 1, 0.33, 1), transform .45s cubic-bezier(0.25, 1, 0.33, 1), border-color .45s cubic-bezier(0.25, 1, 0.33, 1), color .45s cubic-bezier(0.25, 1, 0.33, 1), background-color .45s cubic-bezier(0.25, 1, 0.33, 1), box-shadow .45s cubic-bezier(0.25, 1, 0.33, 1);
+  transition: opacity .45s cubic-bezier(0.25, 1, 0.33, 1), transform .45s cubic-bezier(0.25, 1, 0.33, 1), border-color .45s cubic-bezier(0.25, 1, 0.33, 1), color .45s cubic-bezier(0.25, 1, 0.33, 1), background-color .45s cubic-bezier(0.25, 1, 0.33, 1), box-shadow .45s cubic-bezier(0.25, 1, 0.33, 1);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16)!important;
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+	opacity: 0.87;
+	cursor: pointer;
+}
+
+h1{font-size: 48px;}
+h3{font-size: 18px;font-weight: 400;}
